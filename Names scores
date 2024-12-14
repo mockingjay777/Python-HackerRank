@@ -1,0 +1,12 @@
+n=int(input())
+if 1<=n<=5200:
+    name_list=sorted(input() for _ in range(n))
+    dict={}
+    for i in range (n):
+        marks=sum(ord(char)-64 for char in name_list[i].upper())
+        score=marks*(i+1)
+        dict[name_list[i]]=score
+    q=int(input())
+    for _ in range(q):
+        test=input()
+        print(dict[test])
