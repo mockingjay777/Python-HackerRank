@@ -1,0 +1,9 @@
+n=int(input())
+if 1<=n<=10**3:
+    sum=0
+    for i in range (n):
+        num=int(input())
+        sum=sum+num
+    l1=[int(i) for i in str(sum)]
+    for i in range(0,10):
+        print(l1[i],end='')
