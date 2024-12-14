@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    
+    if 2<=n<=10:
+        l1=list(arr)
+        
+        for i in range(0,len(l1)):
+            if -100<=l1[i]<=100:
+                for j in range(0,i):
+                    if l1[j]>l1[i]:
+                        temp=l1[j]
+                        l1[j]=l1[i]
+                        l1[i]=temp
+        l2=[]
+        for i in l1:
+            if i not in l2:
+                l2.append(i)
+        print(l2[-2])
