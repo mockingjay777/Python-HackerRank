@@ -1,0 +1,31 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    t = int(input().strip())
+    
+    if 1<=t<=10**5:
+        for t_itr in range(t):
+            n = int(input().strip())
+            if 10<=n<=4*(10**16):
+                x=1
+                y=2
+                l1=[1,2]
+                sum=0
+                while y<=n:
+                    temp=y
+                    y=x+y
+                    x=temp
+                    if y<=n:
+                        l1.append(y)
+                for i in l1:
+                    if i%2==0:
+                        sum=sum+i
+                print(sum)
